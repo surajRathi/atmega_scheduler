@@ -23,7 +23,7 @@ volatile uint16_t stack_pointer[MAX_TASKS] = {0, 0};
 volatile uint16_t max_stack[MAX_TASKS] = {200, 200};
 volatile uint16_t stacks_head = RAMEND;
 
-void __attribute__ ((used)) setup() {
+void __attribute__ ((used, noreturn)) setup() {
     LED_SET;
     LED_OFF;
 
